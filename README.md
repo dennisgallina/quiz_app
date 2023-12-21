@@ -1,4 +1,4 @@
-# quiz
+# Quiz App with Flutter
 
 A new Flutter project.
 
