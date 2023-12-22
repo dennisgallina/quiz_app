@@ -18,13 +18,13 @@ class _QuizState extends State<Quiz> {
   // Executed when the StatefulWidget's State object is initialized
   @override
   void initState() {
-    // If pass a function in a Object Constructor, it can be used whereever
+    // If pass a function in an Object Constructor, it can be used whereever
     activeScreen = StartScreen(switchScreen);
     super.initState();
   }
 
   void switchScreen() {
-    // Re-executed the built() an other
+    // Re-execute the built() an other
     setState(() {
       activeScreen = const QuestionsScreen();
     });
@@ -46,7 +46,7 @@ class _QuizState extends State<Quiz> {
               end: Alignment.bottomRight,
             ),
           ),
-          child: Center(child: activeScreen),
+          child: activeScreen,
         ),
       ),
     );
