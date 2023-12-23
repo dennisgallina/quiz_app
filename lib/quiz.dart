@@ -49,7 +49,7 @@ class _QuizState extends State<Quiz> {
       setState(() {
         activeScreen = ResultsScreen(
           chosenAnswer: selectedAnswers,
-          onTap: restartQuiz,
+          onRestart: restartQuiz,
         );
       });
     }

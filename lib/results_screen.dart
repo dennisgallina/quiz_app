@@ -9,14 +9,14 @@ class ResultsScreen extends StatelessWidget {
   const ResultsScreen({
     super.key,
     required this.chosenAnswer, // List of selected answers by the user
-    required this.onTap, // Callback to restart the quiz
+    required this.onRestart, // Callback to restart the quiz
   });
 
   // List of selected answers by the user
   final List<String> chosenAnswer;
 
   // Callback to restart the quiz
-  final void Function() onTap;
+  final void Function() onRestart;
 
   // Function to generate the summary data
   List<Map<String, Object>> getSummaryData() {
@@ -88,7 +88,7 @@ class ResultsScreen extends StatelessWidget {
             // Create a TextButton.icon widget to display the 'Restart Quiz' button
             TextButton.icon(
               // Call the onTap callback to restart the quiz
-              onPressed: onTap,
+              onPressed: onRestart,
 
               // Set the icon to a refresh icon
               icon: const Icon(Icons.refresh_outlined),
