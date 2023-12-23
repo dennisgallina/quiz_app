@@ -40,9 +40,17 @@ class _QuizState extends State<Quiz> {
       setState(() {
         activeScreen = ResultsScreen(
           chosenAnswer: selectedAnswers,
+          onTap: restartQuiz,
         );
       });
     }
+  }
+
+  void restartQuiz() {
+    selectedAnswers = [];
+    setState(() {
+      activeScreen = StartScreen(switchScreen);
+    });
   }
 
   // Executed when the Widget is built for the first time

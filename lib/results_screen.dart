@@ -1,16 +1,17 @@
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:quiz/data/questions.dart';
-import 'package:quiz/models/questions_summary.dart';
+import 'package:quiz/questions_summary/questions_summary.dart';
 
 class ResultsScreen extends StatelessWidget {
   const ResultsScreen({
     super.key,
     required this.chosenAnswer,
+    required this.onTap,
   });
 
   final List<String> chosenAnswer;
+  final void Function() onTap;
 
   List<Map<String, Object>> getSummaryData() {
     final List<Map<String, Object>> summary = [];
@@ -59,7 +60,7 @@ class ResultsScreen extends StatelessWidget {
             QuestionsSummary(summaryData: summaryData),
             const SizedBox(height: 30),
             TextButton.icon(
-              onPressed: () {},
+              onPressed: onTap,
               icon: const Icon(
                 Icons.refresh_outlined,
                 color: Colors.white,
