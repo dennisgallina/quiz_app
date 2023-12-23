@@ -19,17 +19,10 @@ samples, guidance on mobile development, and a full API reference.
 
 ## Features
 
-* A set of 10 multiple-choice questions with varying difficulty levels.
+* A set of 6 multiple-choice questions with varying difficulty levels.
 * A progress bar to track the current question.
 * A 'Restart Quiz' button to start the quiz over.
 * A summary of the user's score at the end of the quiz.
-
-## To-do list
-
-* Add more questions and difficulty levels.
-* Implement a timer for each question.
-* Provide feedback based on the user's score.
-* Share the quiz results with friends.
 
 ## Contributing
 
